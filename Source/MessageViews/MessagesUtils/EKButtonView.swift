@@ -14,7 +14,8 @@ final class EKButtonView: UIView {
     
     private let button = UIButton()
     private let titleLabel = UILabel()
-    
+    private let backgroundView = EKBackgroundView()
+
     private let content: EKProperty.ButtonContent
     
     // MARK: - Setup
@@ -26,6 +27,7 @@ final class EKButtonView: UIView {
         setupButton()
         setupAcceessibility()
         setupInterfaceStyle()
+        setupBackgroundView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,13 +43,23 @@ final class EKButtonView: UIView {
     
     private func setupButton() {
         addSubview(button)
-        button.fillSuperview()
+        button.fillSuperview(priority: .defaultLow)
+
+        widthAnchor.constraint(equalTo: button.widthAnchor, constant: content.contentEdgeInset).isActive = true
         button.addTarget(self, action: #selector(buttonTouchUp),
                          for: [.touchUpInside, .touchUpOutside, .touchCancel])
         button.addTarget(self, action: #selector(buttonTouchDown),
                          for: .touchDown)
         button.addTarget(self, action: #selector(buttonTouchUpInside),
                          for: .touchUpInside)
+    }
+
+    private func setupBackgroundView() {
+        backgroundView.style = .init(background: content.backgroundStyle,
+                                     displayMode: .inferred)
+
+        insertSubview(backgroundView, at: 0)
+        backgroundView.fillSuperview()
     }
     
     private func setupTitleLabel() {
@@ -58,25 +70,27 @@ final class EKButtonView: UIView {
         titleLabel.lineBreakMode = .byWordWrapping
         addSubview(titleLabel)
         titleLabel.layoutToSuperview(axis: .horizontally,
-                                     offset: content.contentEdgeInset)
+                                     offset: 0)
         titleLabel.layoutToSuperview(axis: .vertically,
-                                     offset: content.contentEdgeInset)
+                                     offset: 0)
     }
     
     private func setBackground(by content: EKProperty.ButtonContent,
                                isHighlighted: Bool) {
-        if isHighlighted {
-            backgroundColor = content.highlightedBackgroundColor(for: traitCollection)
-        } else {
-            backgroundColor = content.backgroundColor(for: traitCollection)
-        }
+        backgroundView.style = .init(background: content.backgroundStyle,
+                                     displayMode: .inferred)
     }
     
     private func setupInterfaceStyle() {
-        backgroundColor = content.backgroundColor(for: traitCollection)
         titleLabel.textColor = content.label.style.color(for: traitCollection)
     }
-    
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        backgroundView.layer.cornerRadius = content.cornerRadius
+        backgroundView.layer.masksToBounds = true
+    }
     // MARK: - Selectors
     
     @objc func buttonTouchUpInside() {

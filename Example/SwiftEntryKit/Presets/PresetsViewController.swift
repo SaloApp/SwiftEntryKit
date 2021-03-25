@@ -557,26 +557,31 @@ class PresetsViewController: UIViewController {
             ),
             accessibilityIdentifier: "description"
         )
-        let button = EKProperty.ButtonContent(
-            label: .init(
-                text: "Got it!",
-                style: .init(
-                    font: MainFont.bold.with(size: 16),
-                    color: buttonTitleColor,
-                    displayMode: displayMode
-                )
-            ),
-            backgroundColor: buttonBackgroundColor,
-            highlightedBackgroundColor: buttonTitleColor.with(alpha: 0.05),
-            displayMode: displayMode,
-            accessibilityIdentifier: "button"
-        )
+
+        let style: EKAttributes.BackgroundStyle = .gradient(gradient: .init(colors: [.greenGrass, .amber],
+                                                                            startPoint: .zero,
+                                                                            endPoint: .init(x: 1, y: 1)))
+        let button = EKProperty.ButtonContent(label: .init(
+                                                text: "Got it!",
+                                                style: .init(
+                                                    font: MainFont.bold.with(size: 16),
+                                                    color: buttonTitleColor,
+                                                    displayMode: displayMode
+                                                )),
+                                              backgroundStyle: style,
+                                              contentEdgeInset: 30,
+                                              cornerRadius: 22,
+                                              displayMode: displayMode,
+                                              action: {
+                                                SwiftEntryKit.dismiss()
+                                              })
+
         let message = EKPopUpMessage(
             themeImage: themeImage,
             title: title,
             description: description,
             button: button) {
-                SwiftEntryKit.dismiss()
+            SwiftEntryKit.dismiss()
         }
         let contentView = EKPopUpMessageView(with: message)
         SwiftEntryKit.display(entry: contentView, using: attributes)

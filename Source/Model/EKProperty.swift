@@ -19,8 +19,7 @@ public struct EKProperty {
         public var label: LabelContent
         
         /** Button background color */
-        public var backgroundColor: EKColor
-        public var highlightedBackgroundColor: EKColor
+        public var backgroundStyle: EKAttributes.BackgroundStyle
 
         /** Content edge inset */
         public var contentEdgeInset: CGFloat
@@ -30,32 +29,41 @@ public struct EKProperty {
         
         /** Accessibility identifier that identifies the button */
         public var accessibilityIdentifier: String?
-        
+
+        public var cornerRadius: CGFloat
         /** Action */
         public var action: Action?
-        
+
         public init(label: LabelContent,
                     backgroundColor: EKColor,
                     highlightedBackgroundColor: EKColor,
                     contentEdgeInset: CGFloat = 5,
+                    cornerRadius: CGFloat = 0,
+                    displayMode: EKAttributes.DisplayMode = .inferred,
+                    accessibilityIdentifier: String? = nil,
+                    action: @escaping Action = {}) {
+            self.init(label: label,
+                      backgroundStyle: .color(color: backgroundColor),
+                      contentEdgeInset: contentEdgeInset,
+                      displayMode: displayMode,
+                      accessibilityIdentifier: accessibilityIdentifier,
+                      action: action)
+        }
+
+        public init(label: LabelContent,
+                    backgroundStyle: EKAttributes.BackgroundStyle,
+                    contentEdgeInset: CGFloat = 5,
+                    cornerRadius: CGFloat = 0,
                     displayMode: EKAttributes.DisplayMode = .inferred,
                     accessibilityIdentifier: String? = nil,
                     action: @escaping Action = {}) {
             self.label = label
-            self.backgroundColor = backgroundColor
-            self.highlightedBackgroundColor = highlightedBackgroundColor
+            self.backgroundStyle = backgroundStyle
             self.contentEdgeInset = contentEdgeInset
+            self.cornerRadius = cornerRadius
             self.displayMode = displayMode
             self.accessibilityIdentifier = accessibilityIdentifier
             self.action = action
-        }
-        
-        public func backgroundColor(for traitCollection: UITraitCollection) -> UIColor {
-            return backgroundColor.color(for: traitCollection, mode: displayMode)
-        }
-        
-        public func highlightedBackgroundColor(for traitCollection: UITraitCollection) -> UIColor {
-            return highlightedBackgroundColor.color(for: traitCollection, mode: displayMode)
         }
         
         public func highlighedLabelColor(for traitCollection: UITraitCollection) -> UIColor {

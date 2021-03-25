@@ -15,15 +15,17 @@ final public class EKPopUpMessageView: UIView {
     private var imageView: UIImageView!
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
-    private let actionButton = UIButton()
+    private let actionButton: EKButtonView
     
     private let message: EKPopUpMessage
     
     // MARK: - Setup
-    
+
     public init(with message: EKPopUpMessage) {
         self.message = message
+        self.actionButton = .init(content: message.button)
         super.init(frame: UIScreen.main.bounds)
+
         setupImageView()
         setupTitleLabel()
         setupDescriptionLabel()
@@ -78,20 +80,11 @@ final public class EKPopUpMessageView: UIView {
         actionButton.layout(.top, to: .bottom, of: descriptionLabel, offset: 30)
         actionButton.layoutToSuperview(.bottom, offset: -30)
         actionButton.layoutToSuperview(.centerX)
-        
-        let buttonAttributes = message.button
-        actionButton.buttonContent = buttonAttributes
-        actionButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-        actionButton.layer.cornerRadius = height * 0.5
-        actionButton.addTarget(self, action: #selector(actionButtonPressed), for: .touchUpInside)
     }
     
     private func setupInterfaceStyle() {
         titleLabel.textColor = message.title.style.color(for: traitCollection)
         imageView?.tintColor = message.themeImage?.image.tintColor(for: traitCollection)
-        let tapColor = message.button.highlighedLabelColor(for: traitCollection)
-        actionButton.setTitleColor(tapColor, for: .highlighted)
-        actionButton.setTitleColor(tapColor, for: .selected)
     }
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -101,6 +94,6 @@ final public class EKPopUpMessageView: UIView {
     // MARK: - User Interaction
     
     @objc func actionButtonPressed() {
-        message.action()
+        message.button.action?()
     }
 }
