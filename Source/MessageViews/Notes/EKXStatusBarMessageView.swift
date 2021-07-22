@@ -9,6 +9,7 @@
 import UIKit
 import QuickLayout
 
+@available(iOSApplicationExtension, unavailable)
 public class EKXStatusBarMessageView: UIView {
     
     // MARK: Props

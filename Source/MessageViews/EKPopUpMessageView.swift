@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final public class EKPopUpMessageView: UIView {
 
     // MARK: - Properties

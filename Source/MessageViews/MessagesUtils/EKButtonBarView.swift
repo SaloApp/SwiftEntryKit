@@ -15,6 +15,7 @@ import QuickLayout
  1-2 buttons spread horizontally
  3 or more buttons spread vertically
  */
+@available(iOSApplicationExtension, unavailable)
 final public class EKButtonBarView: UIView {
     
     // MARK: - Properties

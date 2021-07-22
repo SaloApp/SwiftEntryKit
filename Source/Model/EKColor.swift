@@ -9,6 +9,7 @@
 import UIKit
 
 /** A color representation attribute as per user interface style */
+@available(iOSApplicationExtension, unavailable)
 public struct EKColor: Equatable {
     
     // MARK: - Properties
@@ -69,7 +70,7 @@ public struct EKColor: Equatable {
         }
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKColor {
     
     /// Returns the inverse of `self` (light and dark swapped)

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final public class EKNotificationMessageView: EKSimpleMessageView {
     
     // MARK: Props

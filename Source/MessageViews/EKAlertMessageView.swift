@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 final public class EKAlertMessageView: EKSimpleMessageView, EntryAppearanceDescriptor {
     
     // MARK: Props

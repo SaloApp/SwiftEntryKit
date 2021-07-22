@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
 
     /** The position of the entry. */

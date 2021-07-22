@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
 
     /** Contains optionally injected events that take place during the entry lifecycle */

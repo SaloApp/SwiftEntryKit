@@ -6,13 +6,13 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 fileprivate extension Int {
     var isValidDisplayPriority: Bool {
         return self >= EKAttributes.Precedence.Priority.minRawValue && self <= EKAttributes.Precedence.Priority.maxRawValue
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /**
@@ -125,6 +125,7 @@ public extension EKAttributes {
  Entries are ignored as a higher priority entry is being displayed.
  High priority entry overrides any other entry including another equal priority one.
  You can you on of the values (.max, high, normal, low, min) and also set your own values. */
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes.Precedence.Priority {
     static let maxRawValue = 1000
     static let highRawValue = 750

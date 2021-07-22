@@ -10,6 +10,7 @@ import UIKit
 /**
  A stateless, threadsafe (unless described otherwise) entry point that contains the display and the dismissal logic of entries.
  */
+@available(iOSApplicationExtension, unavailable)
 public final class SwiftEntryKit {
     
     /** Describes the a single or multiple entries for possible dismissal states */

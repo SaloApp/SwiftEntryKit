@@ -9,6 +9,7 @@
 import UIKit
 import QuickLayout
 
+@available(iOSApplicationExtension, unavailable)
 class EKEntryView: EKStyleView {
     
     struct Content {

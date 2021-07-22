@@ -8,7 +8,7 @@
 import Foundation
 import CoreGraphics
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Corner radius of the entry - Specifies the corners */

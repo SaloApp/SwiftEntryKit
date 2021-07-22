@@ -8,11 +8,13 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 protocol EntryPresenterDelegate: class {
     var isResponsiveToTouches: Bool { set get }
     func displayPendingEntryOrRollbackWindow(dismissCompletionHandler: SwiftEntryKit.DismissCompletionHandler?)
 }
 
+@available(iOSApplicationExtension, unavailable)
 class EKRootViewController: UIViewController {
     
     // MARK: - Props
@@ -196,7 +198,7 @@ class EKRootViewController: UIViewController {
 }
 
 // MARK: - UIResponder
-
+@available(iOSApplicationExtension, unavailable)
 extension EKRootViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -211,7 +213,7 @@ extension EKRootViewController {
 }
 
 // MARK: - EntryScrollViewDelegate
-
+@available(iOSApplicationExtension, unavailable)
 extension EKRootViewController: EntryContentViewDelegate {
     
     func didFinishDisplaying(entry: EKEntryView, keepWindowActive: Bool, dismissCompletionHandler: SwiftEntryKit.DismissCompletionHandler?) {

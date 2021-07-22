@@ -8,13 +8,13 @@
 
 import UIKit
 import QuickLayout
-
+@available(iOSApplicationExtension, unavailable)
 protocol EntryContentViewDelegate: class {
     func changeToActive(withAttributes attributes: EKAttributes)
     func changeToInactive(withAttributes attributes: EKAttributes, pushOut: Bool)
     func didFinishDisplaying(entry: EKEntryView, keepWindowActive: Bool, dismissCompletionHandler: SwiftEntryKit.DismissCompletionHandler?)
 }
-
+@available(iOSApplicationExtension, unavailable)
 class EKContentView: UIView {
     
     enum OutTranslation {
@@ -492,6 +492,7 @@ class EKContentView: UIView {
 
 
 // MARK: Keyboard Logic
+@available(iOSApplicationExtension, unavailable)
 extension EKContentView {
     
     private enum KeyboardState {
@@ -593,6 +594,7 @@ extension EKContentView {
 }
 
 // MARK: Responds to user interactions (tap / pan / swipe / touches)
+@available(iOSApplicationExtension, unavailable)
 extension EKContentView {
     
     // Tap gesture handler

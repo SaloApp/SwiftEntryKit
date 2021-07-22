@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final public class EKRatingSymbolsContainerView: UIView {
     
     private var message: EKRatingMessage!

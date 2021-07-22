@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final class EKButtonView: UIView {
 
     // MARK: - Properties

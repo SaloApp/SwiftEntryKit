@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final class EKWindowProvider: EntryPresenterDelegate {
     
     /** The artificial safe area insets */

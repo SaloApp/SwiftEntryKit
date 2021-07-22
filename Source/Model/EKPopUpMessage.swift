@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public struct EKPopUpMessage {
     
     /** Code block that is executed as the user taps the popup button */

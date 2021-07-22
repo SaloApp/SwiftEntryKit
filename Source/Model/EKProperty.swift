@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public struct EKProperty {
     
     /** Button content descriptor */

@@ -8,7 +8,7 @@
 
 import UIKit
 import QuickLayout
-
+@available(iOSApplicationExtension, unavailable)
 public class EKNoteMessageView: UIView {
     
     // MARK: Props

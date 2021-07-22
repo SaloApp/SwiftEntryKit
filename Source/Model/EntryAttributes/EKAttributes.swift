@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public struct EKAttributes {
     
     // MARK: Identification

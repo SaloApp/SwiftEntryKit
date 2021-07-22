@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Default attributes - Can be mutated according to the hosting application theme */

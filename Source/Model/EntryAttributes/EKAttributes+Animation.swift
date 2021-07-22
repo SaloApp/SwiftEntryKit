@@ -9,6 +9,7 @@
 import UIKit
 
 // A protocol that describes an animation
+@available(iOSApplicationExtension, unavailable)
 protocol EKAnimation {
     var delay: TimeInterval { get set }
     var duration: TimeInterval { get set }
@@ -16,11 +17,13 @@ protocol EKAnimation {
 }
 
 // A protocol that describes a range animation
+@available(iOSApplicationExtension, unavailable)
 protocol EKRangeAnimation: EKAnimation {
     var start: CGFloat { get set }
     var end: CGFloat { get set }
 }
 
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Describes an animation that can be performed on the entry */

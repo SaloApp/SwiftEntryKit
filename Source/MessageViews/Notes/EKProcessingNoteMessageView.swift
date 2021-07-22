@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public class EKProcessingNoteMessageView: EKAccessoryNoteMessageView {
     
     // MARK: Props

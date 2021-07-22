@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 extension EKAttributes {
     
     private static var minDisplayDuration: DisplayDuration {

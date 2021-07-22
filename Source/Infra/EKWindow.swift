@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 class EKWindow: UIWindow {
     
     var isAbleToReceiveTouches = false

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public struct EKSimpleMessage {
     
     /** The image view descriptor */
