@@ -5,7 +5,7 @@
 //  Created by Daniel Huri on 6/1/18.
 //  Copyright (c) 2018 huri000@gmail.com. All rights reserved.
 //
-
+@available(iOSApplicationExtension, unavailable)
 public struct EKAlertMessage {
     
     public enum ImagePosition {

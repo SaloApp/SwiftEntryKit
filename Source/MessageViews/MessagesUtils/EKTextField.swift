@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final public class EKTextField: UIView {
     
     // MARK: - Properties

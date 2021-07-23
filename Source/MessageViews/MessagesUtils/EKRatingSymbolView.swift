@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final public class EKRatingSymbolView: UIView {
     
     private let button = UIButton()

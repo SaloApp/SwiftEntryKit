@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Status bar appearance */

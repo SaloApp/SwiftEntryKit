@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 extension UIApplication {
     
     func set(statusBarStyle: EKAttributes.StatusBar) {

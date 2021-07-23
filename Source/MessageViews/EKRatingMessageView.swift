@@ -9,6 +9,7 @@
 import UIKit
 import QuickLayout
 
+@available(iOSApplicationExtension, unavailable)
 final public class EKRatingMessageView: UIView, EntryAppearanceDescriptor {
 
     // MARK: Properties

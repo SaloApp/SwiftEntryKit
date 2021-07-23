@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public struct EKNotificationMessage {
     
     /** Insets of the content of the message */

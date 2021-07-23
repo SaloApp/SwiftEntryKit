@@ -8,12 +8,14 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 struct CachedEntry {
     let view: EKEntryView
     let presentInsideKeyWindow: Bool
     let rollbackWindow: SwiftEntryKit.RollbackWindow
 }
 
+@available(iOSApplicationExtension, unavailable)
 protocol EntryCachingHeuristic: class {
     var entries: [CachedEntry] { set get }
     var isEmpty: Bool { get }
@@ -29,6 +31,7 @@ protocol EntryCachingHeuristic: class {
     func contains(entryNamed name: String) -> Bool
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension EntryCachingHeuristic {
     
     var isEmpty: Bool {
@@ -70,7 +73,7 @@ extension EntryCachingHeuristic {
         entries.removeAll()
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 class EKEntryChronologicalQueue: EntryCachingHeuristic {
     
     var entries: [CachedEntry] = []
@@ -79,7 +82,7 @@ class EKEntryChronologicalQueue: EntryCachingHeuristic {
         entries.append(entry)
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 class EKEntryPriorityQueue: EntryCachingHeuristic {
     
     var entries: [CachedEntry] = []

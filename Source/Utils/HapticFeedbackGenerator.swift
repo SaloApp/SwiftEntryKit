@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 struct HapticFeedbackGenerator {
     @available(iOS 10.0, *)
     static func notification(type: EKAttributes.NotificationHapticFeedback) {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     typealias DisplayDuration = TimeInterval
 }

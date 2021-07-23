@@ -8,7 +8,7 @@
 
 import UIKit
 import QuickLayout
-
+@available(iOSApplicationExtension, unavailable)
 extension UILabel {
     var style: EKProperty.LabelStyle {
         set {
@@ -36,7 +36,7 @@ extension UILabel {
         }
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 extension UIButton {
     var buttonContent: EKProperty.ButtonContent {
         set {
@@ -50,7 +50,7 @@ extension UIButton {
         }
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 extension UIImageView {
     var imageContent: EKProperty.ImageContent {
         set {
@@ -109,7 +109,7 @@ extension UIImageView {
         }
     }
 }
-
+@available(iOSApplicationExtension, unavailable)
 extension UITextField {
     
     var placeholder: EKProperty.LabelContent {

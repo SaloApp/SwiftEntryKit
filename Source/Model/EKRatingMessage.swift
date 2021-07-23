@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public struct EKRatingMessage {
     
     // NOTE: Intentionally a reference type

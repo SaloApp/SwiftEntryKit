@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Describes the window level in which the entry would be displayed */

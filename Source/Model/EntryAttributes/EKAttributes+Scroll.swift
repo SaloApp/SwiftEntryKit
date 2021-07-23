@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreGraphics
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Describes the event of scroll user interaction */

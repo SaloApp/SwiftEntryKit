@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Describes the entry behavior when a new entry shows (with equal or higher display-priority) */

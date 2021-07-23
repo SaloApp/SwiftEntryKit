@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 final public class EKFormMessageView: UIView {
     
     private let scrollViewVerticalOffset: CGFloat = 20

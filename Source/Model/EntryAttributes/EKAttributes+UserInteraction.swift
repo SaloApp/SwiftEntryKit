@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+@available(iOSApplicationExtension, unavailable)
 public extension EKAttributes {
     
     /** Describes the user interaction events that are triggered as the user taps the entry / screen */

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 public class EKImageNoteMessageView: EKAccessoryNoteMessageView {
     
     // MARK: Setup

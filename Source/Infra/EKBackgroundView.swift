@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOSApplicationExtension, unavailable)
 final class EKBackgroundView: EKStyleView {
 
     struct Style {
